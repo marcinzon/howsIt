@@ -10,18 +10,26 @@
 
 
 // MAIN STYLES
-body{
+html, body{
+	height:100%;
 	font-family: $mainFonts;
 	background-color: $bgColour;
+}
+.wrapper{
+	min-height:100%;
+	height:auto;
+	height:100%;
+	margin: 0 auto -80px;
 }
 h1{
 	font-family: $mainFonts;
 	font-weight: 800;
 }
-
+.push{
+	height:80px;
+}
 
 .footerWrap{
-	height:80px;
 	background-color: black;
 	color: white;
 }
