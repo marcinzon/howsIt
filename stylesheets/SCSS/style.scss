@@ -1,0 +1,20 @@
+// SCSS STYLES
+
+// IMPORTS
+
+// RESET
+// @import 'reset';
+
+// VARIABLES $mainFonts, $subFonts, $bgColour, $colour1, $colour2
+@import 'variables';
+
+
+// MAIN STYLES
+body{
+	font-family: $mainFonts;
+	background-color: $bgColour;
+}
+h1{
+	font-family: $mainFonts;
+	font-weight: 800;
+}
