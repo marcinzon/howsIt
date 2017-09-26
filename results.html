@@ -7,8 +7,115 @@
 	<!-- Live Reload Code - Remove On Final File -->
 	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
 	<!-- Live Reload Code Ends - Remove On Final File -->
+<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+
+<style>
+	
+.box{
+	height:30px;
+	width:30px;
+}
+#orange1, #orange2{
+	background-color: orange;
+}
+#blue1, #blue2{
+	background-color: blue;
+}
+#green1, #green2{
+	background-color: green;
+}
+.nextBtn{
+	height:20px;
+	width:50px;
+	background-color: grey;
+}
+.hidden{
+	display:none;
+}
+
+
+</style>
 <body>
+
+	<div id="one">
+		<div class="question"><p>Question 1</p></div>
+	<div class="box uno" id="orange1"></div>
+	<div class="box uno" id="blue1"></div>
+	<div class="box uno" id="green1"></div>
+	<div class="nextBtn"></div>
+	</div>
+
+	<div class="hidden" id="two">
+		<div class="question"><p>Question 2</p></div>
+	<div class="box 2" id="orange2"></div>
+	<div class="box 2" id="blue2"></div>
+	<div class="box 2" id="green2"></div>
+	<div class="nextBtn"></div>
+	</div>
 
 	
 </body>
+
+<script>
+var ansArray = [];
+var questionNumber = 0;
+console.log("Original questionNumber="+questionNumber);
+
+$(".box").click(function(){
+	var ans = (event.target.id);
+	var que = (event.target.class);
+	var arrLength = ansArray.length;
+	console.log("array contents so far = " + ansArray); 
+	console.log("current questionNumber = "+questionNumber);
+	console.log("-=-=-=--=-=-=");
+
+	if(questionNumber = (arrLength-1)){
+		console.log( "arrLength = " + arrLength + "; target ID=" + ans + "; selected class="+que);
+		ansArray.push(ans);
+		console.log("array contents =" + ansArray); //log array contents
+		console.log( "new arrLength=" + ansArray.length);
+		// questionNumber = questionNumber-1;
+		console.log("-=-=-=--=-=-=");
+	}
+	else if(questionNumber = arrLength){
+		console.log( "previous arrLength = " + arrLength + "; target ID=" + ans + "; selected class="+que);
+		ansArray.pop();
+		ansArray.push(ans);
+		console.log("array contents =" + ansArray); //log array contents
+		console.log( "new arrLength=" + ansArray.length);
+		// questionNumber = questionNumber-1;
+		console.log("-=-=-=--=-=-=");
+	}
+	// else{
+	// 	console.log( "arrLength = " + arrLength + "; target ID=" + ans + "; selected class="+que);
+	// 	ansArray.pop();
+	// 	console.log("array contents =" + ansArray); //log array contents
+	// 	console.log( "new arrLength=" + ansArray.length);
+	// 	console.log("-=-=-=--=-=-=");
+	// }
+});
+
+$(".nextBtn").click(function(){
+	var current = ansArray.length;
+	if(current = questionNumber){
+		alert("choose an answer");
+		ansArray.pop();
+		console.log("it works");
+	}
+	else{
+	$("#two").removeClass("hidden");
+	console.log("it works");
+	// questionNumber + 1;
+	}
+	
+});
+
+
+
+
+
+</script>
 </html>
