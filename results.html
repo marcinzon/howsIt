@@ -14,7 +14,7 @@
 
 <style>
 	
-.box{
+.box, .boxy{
 	height:30px;
 	width:30px;
 }
@@ -39,13 +39,13 @@
 
 </style>
 <body>
-
-	<div id="one">
-		<div class="question"><p>Question 1</p></div>
-	<div class="box uno" id="orange1"></div>
-	<div class="box uno" id="blue1"></div>
-	<div class="box uno" id="green1"></div>
-	<div class="nextBtn"></div>
+	<div class="boxy" style="background-color: red;"></div>
+	<div id="main">
+		<div class="question"><p>Question</p></div>
+		<div class='box' id="orange1"></div>
+		<div class="box" id="blue1"></div>
+		<div class="box" id="green1"></div>
+		<div class="nextBtn"></div>
 	</div>
 
 	<div class="hidden" id="two">
@@ -55,67 +55,61 @@
 	<div class="box 2" id="green2"></div>
 	<div class="nextBtn"></div>
 	</div>
-
 	
 </body>
 
 <script>
 var ansArray = [];
-var questionNumber = 0;
-console.log("Original questionNumber="+questionNumber);
+var qNum = 1;
+console.log("qNum="+qNum);
+console.log(ansArray.length);
+console.log("-=-=-=--=-=-=");
+	/* Act on the event */
 
 $(".box").click(function(){
 	var ans = (event.target.id);
 	var que = (event.target.class);
 	var arrLength = ansArray.length;
 	console.log("array contents so far = " + ansArray); 
-	console.log("current questionNumber = "+questionNumber);
+	console.log("current qNum = "+qNum);
 	console.log("-=-=-=--=-=-=");
 
-	if(questionNumber = (arrLength-1)){
+	if(qNum = (arrLength+1)){
 		console.log( "arrLength = " + arrLength + "; target ID=" + ans + "; selected class="+que);
 		ansArray.push(ans);
 		console.log("array contents =" + ansArray); //log array contents
 		console.log( "new arrLength=" + ansArray.length);
-		// questionNumber = questionNumber-1;
-		console.log("-=-=-=--=-=-=");
+		qNum = qNum+1;
+		return qNum;
+		// return ansArray;
+		console.log("-=-=-=-FIRST-=-=-=");
 	}
-	else if(questionNumber = arrLength){
+	else if(qNum = arrLength){
 		console.log( "previous arrLength = " + arrLength + "; target ID=" + ans + "; selected class="+que);
 		ansArray.pop();
 		ansArray.push(ans);
 		console.log("array contents =" + ansArray); //log array contents
 		console.log( "new arrLength=" + ansArray.length);
-		// questionNumber = questionNumber-1;
+		qNum = qNum-1;
+		return qNum;
+		// return ansArray;
 		console.log("-=-=-=--=-=-=");
 	}
-	// else{
-	// 	console.log( "arrLength = " + arrLength + "; target ID=" + ans + "; selected class="+que);
-	// 	ansArray.pop();
-	// 	console.log("array contents =" + ansArray); //log array contents
-	// 	console.log( "new arrLength=" + ansArray.length);
-	// 	console.log("-=-=-=--=-=-=");
-	// }
-});
 
+});
 $(".nextBtn").click(function(){
 	var current = ansArray.length;
-	if(current = questionNumber){
+	console.log( "current arrLength=" + ansArray.length);
+	if(current = qNum){
 		alert("choose an answer");
 		ansArray.pop();
 		console.log("it works");
 	}
 	else{
-	$("#two").removeClass("hidden");
-	console.log("it works");
-	// questionNumber + 1;
+	qNum + 1;
+	console.log(qNum);
 	}
-	
 });
-
-
-
-
 
 </script>
 </html>
