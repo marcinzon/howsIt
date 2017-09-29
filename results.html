@@ -18,34 +18,46 @@
 	height:30px;
 	width:30px;
 }
-#orange1, #orange2, #orange3{
+#orange1, #orange2, #orange3, #orange4, .orange1, .orange2, .orange3, .orange4{
 	background-color: orange;
 }
-#blue1, #blue2, #blue3{
+#blue1, #blue2, #blue3, #blue4, .blue1, .blue2, .blue3, .blue4{
 	background-color: blue;
 }
-#green1, #green2, #green3{
+#green1, #green2, #green3, #green4, .green1, .green2, .green3, .green4{
 	background-color: green;
 }
-.nextBtn{
+.nextBtn, .showResults{
 	height:20px;
 	width:50px;
 	background-color: grey;
 }
-.hidden{
+.hidden, .hidden2{
 	display:none;
+}
+.selected{
+	border:2px solid black;
+}
+.other{
+	height: 40px;
+	width:200px;
+	background-color: grey;
+}
+#result1, #result2, #result3, #result4{
+	width:30px;
+	height:30px;
 }
 
 
 </style>
 <body>
-	<div class="boxy" style="background-color: red;"></div>
+	<div class="cheat" style="background-color: red;"><p>cheat</p></div>
 	<div id="one">
 		<div class="question"><p>Question</p></div>
 		<div class='box' id="orange1"></div>
 		<div class="box" id="blue1"></div>
 		<div class="box" id="green1"></div>
-		<div class="nextBtn"></div>
+		<div class="hidden nextBtn"></div>
 	</div>
 
 	<div class="hidden" id="two">
@@ -53,7 +65,7 @@
 	<div class="box" id="orange2"></div>
 	<div class="box" id="blue2"></div>
 	<div class="box" id="green2"></div>
-	<div class="nextBtn"></div>
+	<div class="hidden nextBtn"></div>
 	</div>
 	
 	<div class="hidden" id="three">
@@ -61,79 +73,65 @@
 	<div class="box" id="orange3"></div>
 	<div class="box" id="blue3"></div>
 	<div class="box" id="green3"></div>
-	<div class="nextBtn"></div>
+	<div class="hidden nextBtn"></div>
+	</div>
+
+	<div class="hidden" id="four">
+	<div class="question"><p>Question 4</p></div>
+	<div class="box" id="orange4"></div>
+	<div class="box" id="blue4"></div>
+	<div class="box" id="green4"></div>
+	<div class="hidden showResults nextBtn"></div>
+	</div>
+
+	<div class="hidden other" id="results">
+		<div id="result1"></div>
+		<div id="result2"></div>
+		<div id="result3"></div>
+		<div id="result4"></div>
+		
 	</div>
 </body>
 
 <script>
-var ansArray = [];
-var qNum = 0;
+var answerArray = [];//contains answers array
+var tempAnswer;//holds temporary answer from boxes
 
-
-$(".box").click(function(){
-	boxId = event.target.id;
-	console.log("ansArray = "+ansArray);
-	boxSelecttion(boxId);
-
-});
-$(".nextBtn").click(function(){
-	i=qNum;
-	if(ansArray.length==i){
-		console.log("invalid input");
-	}
-	else{
-		qNum++;
-		$(this).parent().next().removeClass('hidden');
-		console.log("new qNum="+qNum);
-		console.log(ansArray);
-	}
-
+$(".cheat").click(function() {
+	$("*").removeClass('hidden');
+	answerArray.push("blue1","green2","orange3","blue4");
+	console.log(answerArray);
 });
 
-function boxSelecttion(boxId){
-	i=qNum;
-	length=ansArray.length
-	qNum++;
-	console.log("starting qNum="+qNum+"; i="+i+"; length="+length);
-	console.log("selected = "+boxId);
+$(".box").click(function(){ //when box is selected, take ID of selection and hold in variable
+	tempAnswer = event.target.id;
 
-
-
-	if(length>=i){
-		console.log("triggered first IF");
-		ansArray.pop();
-		ansArray.push(boxId);
-		console.log(qNum);
-		qNum--;
+	$(this).siblings().removeClass('hidden');
+	if($(this).siblings().hasClass('selected')){
+		$(this).siblings().removeClass('selected');
+		$(this).addClass('selected');
 	}
 	else{
-		console.log("triggered else");
-		ansArray.push(boxId);
-
+		$(this).addClass('selected');
 	}
+	
 
+});
+$(".nextBtn").click(function(){//when selected, disable previous items and push answer to array
+	answerArray.push(tempAnswer);
+	console.log(answerArray);
+	$(this).parent().next().removeClass('hidden');
+});
 
+$(".showResults").click(function(){
+	// $(this).parent().next().removeClass('hidden2');
 
+	$("#result1").addClass(answerArray[0]);
+	$("#result2").addClass(answerArray[1]);
+	$("#result3").addClass(answerArray[2]);
+	$("#result4").addClass(answerArray[3]);
+});
 
-
-	// if(length<i){ //if array content is less than question number
-	// ansArray.push(boxId);
-	// 
-	// console.log("length="+length);
-	// console.log("new content="+ansArray);
-	// qNum = qNum+1;
-	// console.log("next qNum="+qNum);
-	// }
-
-	// else if(length == i){
-	// 	
-	// 	console.log("qNum="+qNum+"; i="+i);
-	// 	console.log("length="+length);
-	// 	ansArray.pop();
-	// 	ansArray.push(boxId);
-	// 	console.log("new ansArray content = "+ansArray);
-	// }
-}
 
 </script>
 </html>
