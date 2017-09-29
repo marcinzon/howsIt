@@ -67,7 +67,7 @@
 
 <script>
 var ansArray = [];
-var qNum = 1;
+var qNum = 0;
 
 
 $(".box").click(function(){
@@ -78,7 +78,7 @@ $(".box").click(function(){
 });
 $(".nextBtn").click(function(){
 	i=qNum;
-	if(i==ansArray.length){
+	if(ansArray.length==i){
 		console.log("invalid input");
 	}
 	else{
@@ -93,26 +93,46 @@ $(".nextBtn").click(function(){
 function boxSelecttion(boxId){
 	i=qNum;
 	length=ansArray.length
-	console.log("starting qNum="+qNum+"; i="+i);
+	qNum++;
+	console.log("starting qNum="+qNum+"; i="+i+"; length="+length);
 	console.log("selected = "+boxId);
 
-	if(length<i){ //if array content is less than question number
-	ansArray.push(boxId);
-	console.log("triggered first IF");
-	console.log("length="+length);
-	console.log("new content="+ansArray);
-	qNum = qNum+1;
-	console.log("next qNum="+qNum);
-	}
 
-	else if(length == i){
-		console.log("triggered second IF");
-		console.log("qNum="+qNum+"; i="+i);
-		console.log("length="+length);
+
+	if(length>=i){
+		console.log("triggered first IF");
 		ansArray.pop();
 		ansArray.push(boxId);
-		console.log("new ansArray content = "+ansArray);
+		console.log(qNum);
+		qNum--;
 	}
+	else{
+		console.log("triggered else");
+		ansArray.push(boxId);
+
+	}
+
+
+
+
+
+	// if(length<i){ //if array content is less than question number
+	// ansArray.push(boxId);
+	// 
+	// console.log("length="+length);
+	// console.log("new content="+ansArray);
+	// qNum = qNum+1;
+	// console.log("next qNum="+qNum);
+	// }
+
+	// else if(length == i){
+	// 	
+	// 	console.log("qNum="+qNum+"; i="+i);
+	// 	console.log("length="+length);
+	// 	ansArray.pop();
+	// 	ansArray.push(boxId);
+	// 	console.log("new ansArray content = "+ansArray);
+	// }
 }
 
 </script>
