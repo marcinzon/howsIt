@@ -15,7 +15,7 @@ html, body {
   display: none; }
 
 .selected {
-  border: 1px solid black; }
+  font-weight: 800; }
 
 #landing {
   background-color: orange; }
@@ -59,58 +59,63 @@ html, body {
   font-weight: 500;
   background-color: #FFD101FF; }
 
+.questionPage:nth-of-type(odd) {
+  background-color: #DEDEDEFF; }
+
+.questionPage:nth-of-type(even) {
+  background-color: #BFBFBFFF; }
+
 .qContainer {
-  margin: 0px auto auto auto;
-  padding-top: 5%;
+  display: block;
+  margin: auto;
   width: 80%;
-  background-color: orange; }
+  height: 80%;
+  padding-top: 5%; }
 
 .qStatement {
-  background-color: yellow; }
+  font-size: 3vw; }
   .qStatement p:last-child {
     font-size: 2em;
-    font-weight: bold; }
+    font-weight: 800; }
 
 .qSelection {
-  height: 3em;
+  margin-top: 5%;
+  height: 15%;
   width: 100%;
   display: flex;
-  justify-content: space-between; }
+  justify-content: space-between;
+  text-align: center; }
   .qSelection div:nth-of-type(odd) {
-    background-color: red; }
+    background-color: orange; }
   .qSelection div:nth-of-type(even) {
-    background-color: blue; }
+    background-color: #FDC108FF; }
   .qSelection .answerBox {
     width: 10%;
     height: 80%;
     margin: auto;
     display: inline-block; }
+    .qSelection .answerBox p {
+      font-size: 4vw;
+      padding-top: 17%; }
 
 .qFluffText {
-  text-align: center;
-  font-weight: bold;
-  background-color: yellow; }
+  display: block;
+  width: auto;
+  margin-top: 5%; }
 
-.qSymbol {
-  background-color: red; }
-  .qSymbol .qSymbolContainer {
-    width: 50vw;
-    height: 40vw;
-    margin: auto;
-    background-color: blue; }
+.mainFluff {
+  font-size: 5vw;
+  font-weight: 500; }
+
+.qNext {
+  width: 20%;
+  height: 5%;
+  background-color: grey;
+  margin: auto;
+  text-align: center;
+  vertical-align: middle; }
 
 .footerWrap {
   background-color: #242424FF;
   color: white;
   height: 80px; }
-
-.one {
-  background-color: #B6B6B6FF; }
-
-.two {
-  background-color: #282828FF; }
-
-.reveal {
-  height: 30px;
-  width: auto;
-  background-color: red; }

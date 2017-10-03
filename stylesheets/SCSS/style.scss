@@ -28,7 +28,7 @@ html, body{
 }
 
 .selected{
-	border: 1px solid black;
+	font-weight:800;
 }
 
 
@@ -94,54 +94,65 @@ html, body{
 
 
 // QUESTION STYLES
+		.questionPage:nth-of-type(odd){background-color:#DEDEDEFF;} //test
+		.questionPage:nth-of-type(even){background-color:#BFBFBFFF;} //test
 .qContainer{
-	margin:0px auto auto auto;
-	padding-top: 5%;
+	display:block;
+	margin:auto;
 	width:80%;
-	background-color:orange;
+	height:80%;
+	padding-top:5%;
 }
 
 .qStatement{
-	background-color:yellow;
+	font-size: 3vw;
 	p:last-child{
 	font-size: 2em;
-	font-weight:bold;
+	font-weight:800;
 }
 }
 .qSelection{
-	height:3em;
+	margin-top:5%;
+	height:15%;
 	width:100%;
 	display:flex;
 	justify-content: space-between;
+	text-align: center;
 
-		div:nth-of-type(odd){background-color:red;} //test
-		div:nth-of-type(even){background-color:blue;} //test
+		div:nth-of-type(odd){background-color:orange;} //test
+		div:nth-of-type(even){background-color:#FDC108FF;} //test
 
 		.answerBox{
 		width:10%;
 		height:80%;
 		margin:auto;
 		display:inline-block;
+		p{
+			font-size: 4vw;
+			padding-top:17%;
+		}
 	}
 }
 
 .qFluffText{
+	display:block;
+	width:auto;
+	margin-top:5%;
+}
+
+.mainFluff{
+	font-size:5vw;
+	font-weight:500;
+}
+
+.qNext{
+	width:20%;
+	height:5%;
+	background-color:grey;
+	margin:auto;
 	text-align:center;
-	font-weight:bold;
-	background-color:yellow;
+	vertical-align:middle;
 }
-.qSymbol{
-	background-color:red;
-
-	.qSymbolContainer{
-		width: 50vw;
-		height: 40vw;
-		margin:auto;
-		background-color: blue;
-	}
-}
-
-
 
 // FOOTER STYLES
 .footerWrap{
@@ -151,14 +162,3 @@ html, body{
 }
 
 //TEMP STYLES REMOVE THESE
-.one{
-	background-color:#B6B6B6FF;
-}
-.two{
-	background-color:#282828FF;
-}
-.reveal{
-	height:30px;
-	width:auto;
-	background-color:red;
-}

@@ -56,6 +56,7 @@ $('#showResults').click(function(event) {
 
 	$('#results').removeClass('hidden');
 	$('html, body').animate({scrollTop: $('#results').offset().top}, 500);
+	$('#showResults').addClass('hidden');
 
 
 });
