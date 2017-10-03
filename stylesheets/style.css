@@ -1,4 +1,7 @@
 @import url(reset.css);
+div {
+  border: 1px solid black; }
+
 html, body {
   font-family: Roboto, sans-serif; }
 
@@ -6,12 +9,45 @@ html, body {
   height: 100vh; }
 
 .hidden {
-  display: none; }
+  display: all; }
 
 .footerWrap {
   background-color: #242424FF;
   color: white;
   height: 80px; }
+
+.qContainer {
+  display: grid;
+  grid-template-columns: 10% auto 10%;
+  grid-template-rows: 20% auto 20%; }
+
+.qStatement {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 4; }
+
+.qSelection {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 5;
+  grid-row-end: 6; }
+
+.qFluffText {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 6;
+  grid-row-end: 7; }
+
+.qSymbol {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 7;
+  grid-row-end: 9; }
+
+.qNext {
+  grid-column-start: 2;
+  grid-column-end: 3; }
 
 .one {
   background-color: #B6B6B6FF; }

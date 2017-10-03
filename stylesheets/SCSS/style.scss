@@ -8,15 +8,20 @@ $bgColour: white;
 
 
 // MAIN STYLES
+div{
+	border:1px solid black;
+}
+
 html, body{
 	font-family: $mainFonts;
 
 }
+
 .fillHeight{ //fills window size with current div
 	height:100vh;
 }
 .hidden{
-	display:none;
+	display:all;
 }
 
 // FOOTER STYLES
@@ -25,6 +30,50 @@ html, body{
 	color: white;
 	height:80px;
 }
+
+// QUESTION STYLES
+.qContainer{
+	display:grid;
+	grid-template-columns:auto;
+	grid-template-rows: auto
+	grid-template-areas:
+		"statement ."
+		"selection ."
+		"fluff ."
+		"symbol ."
+		"next .";
+}
+.qStatement{
+	grid-column-start:2;
+	grid-column-end:3;
+	grid-row-start:2;
+	grid-row-end:4;
+}
+.qSelection{
+	grid-column-start:2;
+	grid-column-end:3;
+	grid-row-start:5;
+	grid-row-end:6;
+}
+.qFluffText{
+	grid-column-start:2;
+	grid-column-end:3;
+	grid-row-start:6;
+	grid-row-end:7;
+}
+.qSymbol{
+	grid-column-start:2;
+	grid-column-end:3;
+	grid-row-start:7;
+	grid-row-end:9;
+}
+.qNext{
+	grid-column-start:2;
+	grid-column-end:3;
+
+}
+
+
 
 //TEMP STYLES REMOVE THESE
 .one{
