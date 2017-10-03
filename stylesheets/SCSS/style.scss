@@ -14,13 +14,14 @@ html, body{
 }
 
 .testing{
-	float:left;
+	float:right;
+	margin-top:40px;
 	position:fixed;
 }
 
 .fillHeight{ //fills window size with current div
 	height:100vh;
-	// position:relative;
+	position:relative;
 }
 .hidden{
 	display:none;
@@ -29,6 +30,68 @@ html, body{
 .selected{
 	border: 1px solid black;
 }
+
+
+//LANDING PAGE STYLE
+#landing{
+	background-color:orange;
+}
+
+.landingContainer{
+	height:auto;
+	width:auto;
+	position:absolute;
+	top: 20%;
+	left: 15%;
+	transform:(-50%, -50%);
+
+
+	#landingH1{
+	font-weight: 800;
+	font-size:10vw;
+}
+
+	span{
+	font-size:2em;
+}
+
+}
+
+
+
+
+
+//ABOUT STYLES
+.aboutText{
+	width:60vw;
+	display:block;
+	margin: 0px auto auto auto;
+	padding-top:10%;
+
+	h2{
+		font-size: 6vw;
+		font-weight: bold;
+		margin-bottom: 2vw;
+	}
+}
+.aboutCall{
+	margin-top:5%;
+	text-align:center;
+}
+#beginBut{
+	width: 100px;
+	height: 30px;
+	background-color:orange;
+	padding-top:10px;
+	display:block;
+	margin: 10px auto auto auto;
+
+}
+#beginBut:hover{
+		font-weight:500;
+		background-color:#FFD101FF;
+}
+
 
 // QUESTION STYLES
 .qContainer{

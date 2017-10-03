@@ -24,56 +24,66 @@
 		</header>
 
 		<main>
-		<div class="testing">
-			<span id="temp"><p>tempAnswer = null</p></span>
-			<span id="tempArr"><p>answerArray contents = null</p></span>
-
-		</div>
 				<!-- LANDING AREA -->
-				<div id="landing" class="fillHeight one">
-					<h1>
-						HOW'S IT GOING MATE
-					</h1>
-					<a href="#Question1">link</a>
-					<a href="#Question2">link</a>
-					<a href="#Question3">link</a>
-					<a href="#Question4">link</a>
-					<a href="#Question5">link</a>
+				<div id="landing" class="fillHeight">
+					<div class="landingContainer">			
+						<h1 id="landingH1">
+							HOW'S IT <br>GOING MATE?
+						</h1>
+						<p><span>A simple survey about complicated times</span> <br>For people who complain too much</p>
+					</div>
 				</div>
 				
 
 				<!-- ABOUT AREA -->
-				<div id="about" class="fillHeight two">
-					<p>ABOUT</p>
+				<div id="about" class="fillHeight">
+					<div class="aboutText">
+						<h2>So What's All This About Then?</h2>
+
+							<p>One can view our modern world as either half full, and half on the brink of WW3.</p> <br>
+
+							<p>Some people can go live happy and fulfilling lives without ever having their own computer, while some people will complain about their lives ending because the gadget they received as a gift was a different colour from what they expected. </p>
+
+					</div>
+
+					<div class="aboutCall">
+						<p id="aboutFluff">
+							Click below and let's get this over with
+						</p>
 					
-					<input type="button" class="reveal" value="Begin Survey">
+						<div id="beginBut">
+							<p>BEGIN</p>
+						</div>
+					
+					</div>
 				</div>
 
 				
 				<!-- SURVEY GOES HERE-->
 
-				<div id="survey" class="one">
+				<div id="survey" class="one hidden">
 				
 					<div class="fillHeight questionPage" id="Question1">
 						<div class="qContainer">
 							<div class="qStatement">
 							<p>Question Number 1</p>
-							<p>This is the question?</p>
+							<p>How's your house?</p>
 							</div>
 							<div class="qSelection">
-									<div class="answerBox" id="q1a1"></div>
-									<div class="answerBox" id="q1a2"></div>
-									<div class="answerBox selected" id="q1a3"></div>
-									<div class="answerBox" id="q1a4"></div>
-									<div class="answerBox" id="q1a5"></div>
+									<div class="answerBox q1f1" id="q1a1"></div>
+									<div class="answerBox q1f2" id="q1a2"></div>
+									<div class="answerBox q1f3" id="q1a3"></div>
+									<div class="answerBox q1f4" id="q1a4"></div>
+									<div class="answerBox q1f5" id="q1a5"></div>
 							</div>
 							<div class="qFluffText">
-								<p>What do you reckon?</p>
-							</div>
-							<div class="qSymbol">
-								<div class="qSymbolContainer">
-									
-								</div>
+								<p>
+									<span class="q1f1t hidden">My house is honky dory</span>
+									<span class="q1f2t hidden">It's pretty good</span>
+									<span class="q1f3t hidden">It's not bad</span>
+									<span class="q1f4t hidden">It's liveable...I guess</span>
+									<span class="q1f5t hidden">Slumming it hard</span>
+								</p>
 							</div>
 
 						</div>
@@ -81,23 +91,28 @@
 							<p>Next</p>
 						</div>
 
-
 					</div>
 					<div class="fillHeight questionPage hidden" id="Question2">
 						<div class="qContainer">
 							<div class="qStatement">
 							<p>Question Number 2</p>
-							<p>This is the question?</p>
+							<p>How are your finances looking?</p>
 							</div>
 							<div class="qSelection">
-									<div class="answerBox" id="q2a1"></div>
-									<div class="answerBox" id="q2a2"></div>
-									<div class="answerBox selected" id="q2a3"></div>
-									<div class="answerBox" id="q2a4"></div>
-									<div class="answerBox" id="q2a5"></div>
+									<div class="answerBox q2f1" id="q2a1"></div>
+									<div class="answerBox q2f2" id="q2a2"></div>
+									<div class="answerBox q2f3 selected" id="q2a3"></div>
+									<div class="answerBox q2f4" id="q2a4"></div>
+									<div class="answerBox q2f5" id="q2a5"></div>
 							</div>
 							<div class="qFluffText">
-								<p>What do you reckon?</p>
+								<p>
+									<span class="q2f1t hidden">I can make it rain!</span>
+									<span class="q2f2t hidden">I can save at least</span>
+									<span class="q2f3t hidden">I can eat at least</span>
+									<span class="q2f4t hidden">I have an account</span>
+									<span class="q2f5t hidden">I'm so hungry</span>
+								</p>
 							</div>
 							<div class="qSymbol">
 								<div class="qSymbolContainer">
@@ -114,17 +129,23 @@
 						<div class="qContainer">
 							<div class="qStatement">
 							<p>Question Number 3</p>
-							<p>This is the question?</p>
+							<p>Is your education good?</p>
 							</div>
 							<div class="qSelection">
-									<div class="answerBox" id="q3a1"></div>
-									<div class="answerBox" id="q3a2"></div>
-									<div class="answerBox selected" id="q3a3"></div>
-									<div class="answerBox" id="q3a4"></div>
-									<div class="answerBox" id="q3a5"></div>
+									<div class="answerBox q3f1" id="q3a1"></div>
+									<div class="answerBox q3f2" id="q3a2"></div>
+									<div class="answerBox q3f3 selected" id="q3a3"></div>
+									<div class="answerBox q3f4" id="q3a4"></div>
+									<div class="answerBox q3f5" id="q3a5"></div>
 							</div>
 							<div class="qFluffText">
-								<p>What do you reckon?</p>
+								<p>
+									<span class="q3f1t hidden">Best university!</span>
+									<span class="q3f2t hidden">I did well </span>
+									<span class="q3f3t hidden">I had good training</span>
+									<span class="q3f4t hidden">Oh god, my student loans</span>
+									<span class="q3f5t hidden">NOT EVEN</span>
+								</p>
 							</div>
 							<div class="qSymbol">
 								<div class="qSymbolContainer">
@@ -141,17 +162,23 @@
 						<div class="qContainer">
 							<div class="qStatement">
 							<p>Question Number 4</p>
-							<p>This is the question?</p>
+							<p>You keeping healthy?</p>
 							</div>
 							<div class="qSelection">
-									<div class="answerBox" id="q4a1"></div>
-									<div class="answerBox" id="q4a2"></div>
-									<div class="answerBox selected" id="q4a3"></div>
-									<div class="answerBox" id="q4a4"></div>
-									<div class="answerBox" id="q4a5"></div>
+									<div class="answerBox q4f1" id="q4a1"></div>
+									<div class="answerBox q4f2" id="q4a2"></div>
+									<div class="answerBox q4f3 selected" id="q4a3"></div>
+									<div class="answerBox q4f4" id="q4a4"></div>
+									<div class="answerBox q4f5" id="q4a5"></div>
 							</div>
 							<div class="qFluffText">
-								<p>What do you reckon?</p>
+								<p>
+									<span class="q4f1t hidden">COME AT ME BRO</span>
+									<span class="q4f2t hidden">I have insurance</span>
+									<span class="q4f3t hidden">I think I have insurance</span>
+									<span class="q4f4t hidden">I have a community service card</span>
+									<span class="q4f5t hidden">I have God</span>
+								</p>
 							</div>
 							<div class="qSymbol">
 								<div class="qSymbolContainer">
@@ -168,17 +195,23 @@
 						<div class="qContainer">
 							<div class="qStatement">
 							<p>Question Number 5</p>
-							<p>This is the question?</p>
+							<p>How do you feel about your future?</p>
 							</div>
 							<div class="qSelection">
-									<div class="answerBox" id="q5a1"></div>
-									<div class="answerBox" id="q5a2"></div>
-									<div class="answerBox selected" id="q5a3"></div>
-									<div class="answerBox" id="q5a4"></div>
-									<div class="answerBox" id="q5a5"></div>
+									<div class="answerBox q5f1" id="q5a1"></div>
+									<div class="answerBox q5f2" id="q5a2"></div>
+									<div class="answerBox q5f3 selected" id="q5a3"></div>
+									<div class="answerBox q5f4" id="q5a4"></div>
+									<div class="answerBox q5f5" id="q5a5"></div>
 							</div>
 							<div class="qFluffText">
-								<p>What do you reckon?</p>
+								<p>
+									<span class="q5f1t hidden">I think the future is GREAT</span>
+									<span class="q5f2t hidden">I'm optimistic about my future</span>
+									<span class="q5f3t hidden">I think I can manage</span>
+									<span class="q5f4t hidden">I'm seriously worried</span>
+									<span class="q5f5t hidden">IN THE GRIM DARKNESS OF THE FUTURE, THERE IS ONLY WAR</span>
+								</p>
 							</div>
 							<div class="qSymbol">
 								<div class="qSymbolContainer">
@@ -191,10 +224,10 @@
 							<p>Next</p>
 						</div>						
 					</div>
-					<div class="fillHeight questionShow" id="surveyShow">
-						
-						<input type="button" class="reveal" value="Show Results">	
+					<div class="fillHeight questionPage hidden" id="preResults">
 
+						<p id="showResults">Let's see how you did!</p>
+														
 					</div>
 							
 				</div>
@@ -203,7 +236,7 @@
 				<!-- END SURVEY -->
 
 				<!-- RESULTS GO HERE -->
-				<div id="results" class="fillHeight two hidden">
+				<div id="results" class="fillHeight hidden">
 					<p>RESULTS</p>
 					<input type="button" class="redo" value="Take Survey Again">	
 					
@@ -217,7 +250,7 @@
 
 		<!-- FOOTER GOES HERE -->
 		<footer>
-			<div class="footerWrap">
+			<div id="footer" class="footerWrap">
 				<p>This website is a project by Marc Inzon for Media Design School. &copy2017. All Rights Reserved</p>
 			</div>
 		</footer>
