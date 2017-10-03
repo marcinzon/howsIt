@@ -9,7 +9,11 @@
 	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
 	<!-- Live Reload Code Ends - Remove On Final File -->
 
-	<link rel="stylesheet" href="stylesheets/style.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<!-- <link rel="stylesheet" href="stylesheets/reset.css"> -->
+<link rel="stylesheet" href="stylesheets/style.css">
+
 <body>
 <!-- main body -->
 	<div class="wrapper">
@@ -18,56 +22,58 @@
 		<header>
 		
 		</header>
-		<main>
-			<div class="wrapper">
-			<!-- LANDING AREA -->
-			<div class="landing">
-				<div class="hero">
-					<h1>How's It<br>Going Mate?</h1>
-					<p>Problems in the first world</p>
-				</div>
-				<!-- LINK TO SURVEY -->
-				<div class="survery">
-					<a href="survey.html">
-						<P>Check yourself</P>
-					</a>
-				</div>
 
+		<main>
+				<!-- LANDING AREA -->
+				<div id="landing" class="fillHeight one">
+					<h1>
+						HOW'S IT GOING MATE
+					</h1>
+				</div>
+				
 
 				<!-- ABOUT AREA -->
-				<div class="about">
-					<div class="nzMap">
-						
-					</div>
-					<div class="aboutBlurb">
-						<h2> </h2>	
-						<p>
-							Everybody has problems. But a little perspective never hurts. Follow the link below to a survey
-						</p>
-					</div>
+				<div id="about" class="fillHeight two">
+					<p>ABOUT</p>
+					
+					<input type="button" class="reveal" value="Begin Survey">
+				</div>
 
+				
+				<!-- SURVEY GOES HERE-->
+
+				<div id="survey" class="fillHeight one hidden">
+					<p>SURVEY</p>
+					<input type="button" class="reveal" value="Show Results">			
+					
+
+					
 				</div>
 
 
-				<!-- RESULTS AREA -->
-				<div class="resultsLink">
-					<a href="results.html">
-						<div class="resultsBt">
-							<P>See Results</P>
-						</div>
-					</a>
+				<!-- END SURVEY -->
+
+				<!-- RESULTS GO HERE -->
+				<div id="results" class="fillHeight two hidden">
+					<p>RESULTS</p>
+					<input type="button" class="redo" value="Take Survey Again">	
+					
 				</div>
-			</div>
-			<div class="push"></div>
-		</div>
-		</main>
+
 		
+
+				<!-- END RESULTS -->
+		</main>
+	</div>
+
+		<!-- FOOTER GOES HERE -->
 		<footer>
 			<div class="footerWrap">
 				<p>This website is a project by Marc Inzon for Media Design School. &copy2017. All Rights Reserved</p>
 			</div>
-		</footer>	
-	</div>
+		</footer>
+
+
 <!-- Main Javascript assets -->
 	<script src="scripts/index.js"></script>
 </body>

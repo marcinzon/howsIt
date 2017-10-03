@@ -1,35 +1,40 @@
 // SCSS STYLES
+@import 'reset.css';
 
-// IMPORTS
 
-// RESET
-// @import 'reset';
-
-// VARIABLES $mainFonts, $subFonts, $bgColour, $colour1, $colour2
-@import 'variables';
+// VARIABLES
+$mainFonts: Roboto, sans-serif;
+$bgColour: white;
 
 
 // MAIN STYLES
 html, body{
-	height:100%;
 	font-family: $mainFonts;
-	background-color: $bgColour;
+
 }
-.wrapper{
-	min-height:100%;
-	height:auto;
-	height:100%;
-	margin: 0 auto -80px;
+.fillHeight{ //fills window size with current div
+	height:100vh;
 }
-h1{
-	font-family: $mainFonts;
-	font-weight: 800;
+.hidden{
+	display:none;
 }
-.push{
+
+// FOOTER STYLES
+.footerWrap{
+	background-color: #242424FF;
+	color: white;
 	height:80px;
 }
 
-.footerWrap{
-	background-color: black;
-	color: white;
+//TEMP STYLES REMOVE THESE
+.one{
+	background-color:#B6B6B6FF;
+}
+.two{
+	background-color:#3E3E3EFF;
+}
+.reveal{
+	height:30px;
+	width:auto;
+	background-color:red;
 }

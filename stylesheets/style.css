@@ -1,21 +1,25 @@
+@import url(reset.css);
 html, body {
-  height: 100%;
-  font-family: Roboto, sans-serif;
-  background-color: white; }
+  font-family: Roboto, sans-serif; }
 
-.wrapper {
-  min-height: 100%;
-  height: auto;
-  height: 100%;
-  margin: 0 auto -80px; }
+.fillHeight {
+  height: 100vh; }
 
-h1 {
-  font-family: Roboto, sans-serif;
-  font-weight: 800; }
-
-.push {
-  height: 80px; }
+.hidden {
+  display: none; }
 
 .footerWrap {
-  background-color: black;
-  color: white; }
+  background-color: #242424FF;
+  color: white;
+  height: 80px; }
+
+.one {
+  background-color: #B6B6B6FF; }
+
+.two {
+  background-color: #3E3E3EFF; }
+
+.reveal {
+  height: 30px;
+  width: auto;
+  background-color: red; }
