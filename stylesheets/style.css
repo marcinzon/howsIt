@@ -56,10 +56,10 @@ html, body {
 
 #beginBut:hover {
   font-weight: 500;
-  background-color: #FFD101FF; }
+  background-color: #FFCC00FF; }
 
 .questionPage:nth-of-type(odd) {
-  background-color: #DEDEDEFF; }
+  background-color: #FFFFCCFF; }
 
 .questionPage:nth-of-type(even) {
   background-color: #FFFFFFFF; }
@@ -87,7 +87,7 @@ html, body {
   .qSelection div:nth-of-type(odd) {
     background-color: orange; }
   .qSelection div:nth-of-type(even) {
-    background-color: #FDC108FF; }
+    background-color: #FF9933FF; }
   .qSelection .answerBox {
     width: 10%;
     height: 80%;
@@ -109,7 +109,7 @@ html, body {
 .qNext {
   width: 20%;
   height: 5%;
-  background-color: #ECBF31FF;
+  background-color: #FFCC00FF;
   margin: auto;
   padding-top: 1%;
   text-align: center;
@@ -133,4 +133,4 @@ html, body {
   font-weight: 500; }
 
 .return:hover {
-  background-color: #FFC300FF; }
+  background-color: #FFCC33FF; }
