@@ -8,21 +8,77 @@ $bgColour: white;
 
 
 // MAIN STYLES
-div{
-	border:1px solid black;
-}
-
 html, body{
 	font-family: $mainFonts;
 
 }
 
+.testing{
+	float:left;
+	position:fixed;
+}
+
 .fillHeight{ //fills window size with current div
 	height:100vh;
+	// position:relative;
 }
 .hidden{
-	display:all;
+	display:none;
 }
+
+.selected{
+	border: 1px solid black;
+}
+
+// QUESTION STYLES
+.qContainer{
+	margin:0px auto auto auto;
+	padding-top: 5%;
+	width:80%;
+	background-color:orange;
+}
+
+.qStatement{
+	background-color:yellow;
+	p:last-child{
+	font-size: 2em;
+	font-weight:bold;
+}
+}
+.qSelection{
+	height:3em;
+	width:100%;
+	display:flex;
+	justify-content: space-between;
+
+		div:nth-of-type(odd){background-color:red;} //test
+		div:nth-of-type(even){background-color:blue;} //test
+
+		.answerBox{
+		width:10%;
+		height:80%;
+		margin:auto;
+		display:inline-block;
+	}
+}
+
+.qFluffText{
+	text-align:center;
+	font-weight:bold;
+	background-color:yellow;
+}
+.qSymbol{
+	background-color:red;
+
+	.qSymbolContainer{
+		width: 50vw;
+		height: 40vw;
+		margin:auto;
+		background-color: blue;
+	}
+}
+
+
 
 // FOOTER STYLES
 .footerWrap{
@@ -31,56 +87,12 @@ html, body{
 	height:80px;
 }
 
-// QUESTION STYLES
-.qContainer{
-	display:grid;
-	grid-template-columns:auto;
-	grid-template-rows: auto
-	grid-template-areas:
-		"statement ."
-		"selection ."
-		"fluff ."
-		"symbol ."
-		"next .";
-}
-.qStatement{
-	grid-column-start:2;
-	grid-column-end:3;
-	grid-row-start:2;
-	grid-row-end:4;
-}
-.qSelection{
-	grid-column-start:2;
-	grid-column-end:3;
-	grid-row-start:5;
-	grid-row-end:6;
-}
-.qFluffText{
-	grid-column-start:2;
-	grid-column-end:3;
-	grid-row-start:6;
-	grid-row-end:7;
-}
-.qSymbol{
-	grid-column-start:2;
-	grid-column-end:3;
-	grid-row-start:7;
-	grid-row-end:9;
-}
-.qNext{
-	grid-column-start:2;
-	grid-column-end:3;
-
-}
-
-
-
 //TEMP STYLES REMOVE THESE
 .one{
 	background-color:#B6B6B6FF;
 }
 .two{
-	background-color:#3E3E3EFF;
+	background-color:#282828FF;
 }
 .reveal{
 	height:30px;
