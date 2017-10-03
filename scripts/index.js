@@ -23,7 +23,6 @@ $('#beginBut').click(function(event) {
 $('.answerBox').click(function(event) {
 
 	parentID = $(this).closest('.questionPage').prop('id');
-	testParent(parentID);
 
 	fluff =  $(this).attr('class').split(' ')[1];
 
@@ -47,8 +46,6 @@ $('.answerBox').click(function(event) {
 	}
 
 		tempAnswer = event.target.id;
-		$('#temp').remove();
-		$('.testing').append("<span id="+"temp"+"><p>tempAnswer = "+tempAnswer+"</p></span>");
 
 });
 
@@ -70,8 +67,6 @@ $('.qNext').click(function() {
 		$('#preResults').removeClass('hidden');
 		$(this).parent().slideUp(500);
 		$('html, body').animate({scrollTop: $('#preResults').offset().top}, 500);
-		$('#tempArr').remove();
-		$('.testing').append("<span id="+"tempArr"+"><p>DONE - answerArray contents = "+answerArray+"</p></span>");
 		
 
 	}
@@ -89,33 +84,18 @@ $('.qNext').click(function() {
 
 });
 
+$('.return').click(function(event) {
+	$('html, body').animate({scrollTop: $('#landing').offset().top}, 800);
+	$('.landingContainer').remove();
+	$('#landing').append("<div class="+"landingContainer"+"><h1 id="+"landingH1"+">WAS IT REALLY <br>THAT BAD?</h1><p><span>Give it another go</span></p></div>");
+	$('#preResults').addClass('hidden');
+	$('#beginBut').addClass('hidden');
+	$('#beginButAgain').removeClass('hidden');
 
-
-$(".redo").click(function() {
-	$('#results').addClass('hidden');
-	// $('#Question1').removeClass('hidden');
-    $('html, body').animate({
-        scrollTop: $("#landing").offset().top
-    }, 2000);
+});
+$('#beginButAgain').click(function(event) {
+	location.reload();
 });
 
-function testParent(parentID){
-
-	if(parentID=='Question1'){
-		$('#aboutFluff').remove();
-		$('#about').append("<span id="+"aboutFluff"+"><p> You just started, go back down there </p></span>");
-
-	}
-	else if(parentID=='Question5'){
-		$('#aboutFluff').remove();
-		$('#about').append("<span id="+"aboutFluff"+"><p> Why are you scrolling up now? You're almost finished! </p></span>");
-	}
-	else{
-		$('#aboutFluff').remove();
-		$('#about').append("<span id="+"aboutFluff"+"><p> Seriously, stop scrolling up here </p></span>");
-	}
-	
-	
-}
 
 });

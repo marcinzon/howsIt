@@ -78,12 +78,12 @@ html, body{
 	margin-top:5%;
 	text-align:center;
 }
-#beginBut{
+.beginB{
 	width: 100px;
 	height: 30px;
 	background-color:orange;
 	padding-top:10px;
-	display:block;
+	// display:block;
 	margin: 10px auto auto auto;
 
 }
@@ -95,7 +95,7 @@ html, body{
 
 // QUESTION STYLES
 		.questionPage:nth-of-type(odd){background-color:#DEDEDEFF;} //test
-		.questionPage:nth-of-type(even){background-color:#BFBFBFFF;} //test
+		.questionPage:nth-of-type(even){background-color:#FFFFFFFF;} //test
 .qContainer{
 	display:block;
 	margin:auto;
@@ -148,17 +148,42 @@ html, body{
 .qNext{
 	width:20%;
 	height:5%;
-	background-color:grey;
+	background-color:#ECBF31FF;
 	margin:auto;
+	padding-top:1%;
 	text-align:center;
 	vertical-align:middle;
 }
 
-// FOOTER STYLES
-.footerWrap{
-	background-color: #242424FF;
-	color: white;
-	height:80px;
+
+
+.final{
+	width:80%;
+	display:inline-block;
+	padding-top:15%;
+	padding-left:10%;
+	font-size:5vw;
 }
+
+.return{
+	text-align:center;
+	display:block;
+	margin:5% auto auto auto;
+	width:15%;
+	height:auto;
+	padding:20px;
+	background-color:orange;
+	font-weight:500;
+}
+.return:hover{
+	background-color:#FFC300FF;
+}
+
+// FOOTER STYLES
+// .footerWrap{
+// 	background-color: #242424FF;
+// 	color: white;
+// 	height:80px;
+// }
 
 //TEMP STYLES REMOVE THESE
